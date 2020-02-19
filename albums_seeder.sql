@@ -22,4 +22,6 @@ values('eagles', 'hotel california', '1978', 'rock', 15.5, 30),
         ('Adele', '21', '2011', 'Pop, soul', 25.3, 31),
         ('Celine Dion', 'Let''s Talk About Love', '1997', 'Pop, soft rock', 19.3, 31),
         ('The Beatles', '1', '2000', 'Rock', 23.4, 31),
-        ('Metallica', 'Metallica', '1991', 'Heavy metal', 25.2, 31);
+        ('Metallica', 'Metallica', '1991', 'Heavy metal', 25.2, 31),
+        ('Alanis Morissette', 'Jagged Little Pill', '1995', 'Alternative rock', 24.4, 33),
+        ('Michael Jackson', 'Dangerous', '1991', 'New jack swing, R&B and pop', 17.3, 32);
