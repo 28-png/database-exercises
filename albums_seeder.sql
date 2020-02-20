@@ -7,8 +7,8 @@ CREATE TABLE albums( id INT UNSIGNED AUTO_INCREMENT,
                      album_name VARCHAR(255),
                      release_date INT,
                     genre VARCHAR (255),
-                     total_certified_sales DECIMAL(3, 1),
-                     sales DECIMAL(2),
+                     total_certified_sales FLOAT NOT NULL,
+                    sales DECIMAL(2),
                     PRIMARY KEY (id) );
 
 INSERT INTO albums(artist, album_name, release_date, genre, total_certified_sales, sales)
