@@ -1,10 +1,11 @@
 USE employees;
 
-SELECT first_name
+SELECT *
 FROM employees
-WHERE gender = 'M'
-AND first_name IN ('Irena', 'Vidya')
-OR first_name = 'Suzette';
+WHERE (first_name = 'Irena'
+OR first_name = 'Vidya'
+OR first_name = 'Maya')
+AND gender = 'M';
 
 SELECT last_name
 FROM employees
