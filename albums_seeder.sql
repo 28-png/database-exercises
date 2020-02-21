@@ -10,7 +10,7 @@ CREATE TABLE albums( id INT UNSIGNED AUTO_INCREMENT,
                      total_certified_sales FLOAT NOT NULL,
                     sales DECIMAL(2),
                     PRIMARY KEY (id))
-                    UNIQUE KEY `uc_album` (`artist` `album_name`);
+                    UNIQUE KEY `uc_album` (`artist`, `album_name`);
 
 INSERT INTO albums(artist, album_name, release_date, genre, total_certified_sales, sales)
 values('eagles', 'hotel california', 1978, 'rock', 15.5, 30),
