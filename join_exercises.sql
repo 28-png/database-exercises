@@ -51,12 +51,25 @@ FROM employees as e
 WHERE de.to_date = '9999-01-01' AND e.emp_no AND gender = 'F'
 ORDER BY dept_name;
 
+
 SELECT e.title AS `Title`, count(e.title) AS 'Count'
 FROM titles as e
 LEFT JOIN titles AS de ON e.title = de.emp_no
 WHERE e.to_date = '9999-01-01' AND e.emp_no
 GROUP BY title;
 
+
+SELECT d.dept_name AS `Department Name`, concat(e.first_name, ' ', e.last_name) AS 'Manager Name',
+s.salary AS 'Salary'
+FROM employees as e
+         JOIN dept_manager as de
+             ON de.emp_no = e.emp_no
+         JOIN departments as d
+              ON d.dept_no = de.dept_no
+        JOIN salaries AS s
+            ON e.emp_no = s.emp_no
+WHERE de.to_date = '9999-01-01' AND s.emp_no
+ORDER BY dept_name;
 
 
 
