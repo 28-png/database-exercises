@@ -51,13 +51,10 @@ FROM employees as e
 WHERE de.to_date = '9999-01-01' AND e.emp_no AND gender = 'F'
 ORDER BY dept_name;
 
-SELECT d.title AS `Title`, concat(count(e.title)) AS 'Count'
+SELECT e.title AS `Title`, count(e.title) AS 'Count'
 FROM titles as e
-         JOIN dept_emp as de
-             ON de.emp_no = e.emp_no
-         JOIN titles as d
-              ON d.title = de.dept_no
-WHERE  e.emp_no
+LEFT JOIN titles AS de ON e.title = de.emp_no
+WHERE e.to_date = '9999-01-01' AND e.emp_no
 GROUP BY title;
 
 
