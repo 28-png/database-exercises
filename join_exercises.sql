@@ -68,7 +68,7 @@ FROM employees as e
               ON d.dept_no = de.dept_no
        JOIN salaries AS s
             ON e.emp_no = s.emp_no
-WHERE s.to_date = '9999-01-01'
+WHERE s.to_date = '9999-01-01' AND de.to_date = '9999-01-01'
 ORDER BY dept_name;
 
 
