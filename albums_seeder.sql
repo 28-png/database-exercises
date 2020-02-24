@@ -5,11 +5,12 @@ DROP TABLE IF EXISTS albums;
 CREATE TABLE albums( id INT UNSIGNED AUTO_INCREMENT,
                      artist VARCHAR(50),
                      album_name VARCHAR(255),
-                     release_date INT,
+                    release_date INT,
                     genre VARCHAR (255),
                      total_certified_sales FLOAT NOT NULL,
                     sales DECIMAL(2),
-                    PRIMARY KEY (id) );
+                    PRIMARY KEY (id))
+                    UNIQUE KEY `uc_album` (`artist`, `album_name`);
 
 INSERT INTO albums(artist, album_name, release_date, genre, total_certified_sales, sales)
 values('eagles', 'hotel california', 1978, 'rock', 15.5, 30),
